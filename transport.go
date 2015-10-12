@@ -36,7 +36,7 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	return res, nil
 }
 
-func (t *Transport) base() *http.Transport {
+func (t *Transport) base() http.RoundTripper {
 	if t.Base != nil {
 		return t.Base
 	}
